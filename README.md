@@ -1,1 +1,0 @@
-# Wijdane.github.io
