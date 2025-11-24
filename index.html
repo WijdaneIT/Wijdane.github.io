@@ -1,4 +1,3 @@
-<!-- Version mise à jour: <%= new Date().toLocaleString() %> -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,32 +33,16 @@
       text-align: center;
       padding: 60px 10px 40px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-      background-size: cover;
     }
     
     h1 { 
       font-size: 2.8em; 
       margin: 0 0 15px 0; 
       font-weight: 700;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
     
     nav {
       margin-top: 20px;
-      position: relative;
-      z-index: 1;
     }
     
     nav a {
@@ -85,30 +68,11 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(179, 197, 221, 0.2);
       padding: 40px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease forwards;
-    }
-    
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
     
     section {
       margin-bottom: 50px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease forwards;
     }
-    
-    section:nth-child(1) { animation-delay: 0.1s; }
-    section:nth-child(2) { animation-delay: 0.2s; }
-    section:nth-child(3) { animation-delay: 0.3s; }
-    section:nth-child(4) { animation-delay: 0.4s; }
-    section:nth-child(5) { animation-delay: 0.5s; }
     
     h2 {
       color: var(--primary);
@@ -116,17 +80,6 @@
       margin-bottom: 20px;
       padding-bottom: 10px;
       border-bottom: 2px solid var(--accent);
-      position: relative;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 80px;
-      height: 2px;
-      background: var(--secondary);
     }
     
     .skills {
@@ -144,14 +97,12 @@
       padding: 8px 20px;
       font-size: 1em;
       transition: var(--transition);
-      cursor: default;
     }
     
     .skill:hover { 
-      transform: translateY(-5px) scale(1.05); 
+      transform: translateY(-5px);
       background: var(--primary); 
       color: var(--white); 
-      box-shadow: 0 5px 15px rgba(53, 102, 176, 0.3);
     }
     
     .projects { 
@@ -161,7 +112,6 @@
     .project {
       background: #f3f8ff;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(164, 181, 222, 0.1);
       padding: 20px;
       margin-bottom: 20px;
       transition: var(--transition);
@@ -170,13 +120,7 @@
     
     .project:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(164, 181, 222, 0.2);
       border-left-color: var(--primary);
-    }
-    
-    .project b {
-      font-size: 1.2em;
-      color: var(--secondary);
     }
     
     .more-projects {
@@ -187,29 +131,21 @@
       font-weight: 600;
     }
     
+    /* Styles pour la vidéo */
     .video-section {
       margin-top: 30px;
       text-align: center;
     }
     
-    .video-placeholder {
+    .video-container {
       background: #f0f5ff;
       border-radius: 12px;
-      padding: 60px 20px;
+      padding: 40px 20px;
       margin-top: 20px;
       border: 2px dashed var(--accent);
-      transition: var(--transition);
     }
     
-    .video-placeholder:hover {
-      background: #e6efff;
-      border-color: var(--primary);
-    }
-    
-    .cv-section {
-      margin-top: 30px;
-    }
-    
+    /* Styles pour le CV */
     .cv-download {
       display: inline-block;
       background: var(--primary);
@@ -220,15 +156,14 @@
       font-weight: 600;
       margin-top: 15px;
       transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(53, 102, 176, 0.3);
     }
     
     .cv-download:hover {
       background: var(--secondary);
       transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(53, 102, 176, 0.4);
     }
     
+    /* Styles pour la galerie */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -250,8 +185,13 @@
     
     .gallery-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(164, 181, 222, 0.3);
       border-color: var(--accent);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .gallery-placeholder {
@@ -259,6 +199,7 @@
       font-weight: 600;
     }
     
+    /* Styles pour les liens sociaux */
     .social-links {
       display: flex;
       justify-content: center;
@@ -282,7 +223,6 @@
     .social-link:hover {
       background: var(--primary);
       color: white;
-      transform: translateY(-3px);
     }
     
     footer {
@@ -311,24 +251,6 @@
       .gallery {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
-      
-      .gallery-item {
-        height: 120px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      h1 { 
-        font-size: 1.6em; 
-      }
-      
-      .content {
-        padding: 15px;
-      }
-      
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
     }
   </style>
 </head>
@@ -346,63 +268,118 @@
   </header>
   
   <div class="content">
+    <!-- SECTION PROJETS -->
     <section id="projets">
       <h2>Mes projets</h2>
       <div class="projects">
+        
+        <!-- PROJET 1 : Simulateur d'achats -->
         <div class="project">
-          <b>Simulateur intelligent d'achats</b><br>
+          <b>🚀 Simulateur intelligent d'achats - BTP</b><br>
           Système IA pour optimiser les achats dans le BTP.
+          <div style="margin-top: 10px;">
+            <small>
+              📁 <a href="assets/documents/projets/simulateur-achats/presentation.pptx">Présentation</a> | 
+              💻 <a href="assets/code/simulateur-achats/app.py">Code source</a> |
+              🎯 <a href="https://votre-lien-streamlit.streamlit.app/" target="_blank">Voir l'application</a>
+            </small>
+          </div>
         </div>
+        
+        <!-- PROJET 2 : Analyse de données -->
         <div class="project">
-          <b>Analyse de données</b><br>
-          Visualisation, nettoyage et analyse avec Python (Pandas, Matplotlib).
+          <b>📊 Analyse de données</b><br>
+          Visualisation, nettoyage et analyse avec Python.
+          <div style="margin-top: 10px;">
+            <small>
+              📁 <a href="assets/documents/projets/analyse-donnees/rapport.pdf">Rapport</a> | 
+              💻 <a href="assets/code/analyse-donnees/analyse.py">Code source</a> |
+              📈 <a href="assets/images/projets/analyse-donnees/graphiques.jpg">Visualisations</a>
+            </small>
+          </div>
         </div>
+        
+        <!-- PROJET 3 : Mini-projets -->
         <div class="project">
-          <b>Mini-projets Python</b><br>
-          Scripts d'IA, automatisation, petits exercices ludiques.
+          <b>🐍 Mini-projets Python</b><br>
+          Scripts d'IA, automatisation, exercices ludiques.
+          <div style="margin-top: 10px;">
+            <small>
+              💻 <a href="https://github.com/votre-username/mini-projets" target="_blank">Repository GitHub</a> |
+              📁 <a href="assets/documents/projets/mini-projets/documentation.pdf">Documentation</a>
+            </small>
+          </div>
         </div>
+        
       </div>
       <p class="more-projects">Et encore pleins de projets à venir...</p>
     </section>
     
+    <!-- SECTION VIDÉO -->
     <section id="video">
       <h2>Présentation vidéo</h2>
-      <p>Découvrez mon parcours et mes passions en vidéo :</p>
+      <p>Découvrez mon parcours en vidéo :</p>
       <div class="video-section">
-        <div class="video-placeholder">
-          <p>🎥 Vidéo de présentation à venir bientôt</p>
-          <p><small>Cette section sera mise à jour avec une vidéo personnelle</small></p>
+        <div class="video-container">
+          <!-- REMPLACEZ CE TEXTE PAR VOTRE VIDÉO -->
+          <p>🎥 Vidéo de présentation à venir</p>
+          <p><small>Quand vous aurez votre vidéo, remplacez cette section par :</small></p>
+          <pre style="background: white; padding: 10px; border-radius: 5px;">
+&lt;video width="80%" controls&gt;
+  &lt;source src="assets/videos/presentation.mp4" type="video/mp4"&gt;
+  Votre navigateur ne supporte pas la vidéo.
+&lt;/video&gt;
+          </pre>
         </div>
       </div>
     </section>
     
+    <!-- SECTION CV -->
     <section id="cv">
       <h2>Mon CV</h2>
-      <p>Téléchargez mon curriculum vitæ pour en savoir plus sur mon parcours professionnel et académique :</p>
-      <a href="#" class="cv-download">📄 Télécharger mon CV (PDF)</a>
-      <p><small>Note: Remplacez ce lien par votre vrai CV lorsque vous l'aurez préparé</small></p>
+      <p>Téléchargez mon curriculum vitæ :</p>
+      <!-- REMPLACEZ PAR VOTRE VRAI CV -->
+      <a href="assets/documents/cv.pdf" class="cv-download" download>
+        📄 Télécharger mon CV (PDF)
+      </a>
+      <p><small>👉 Renommez votre fichier CV en "cv.pdf" et mettez-le dans le dossier assets/documents/</small></p>
     </section>
     
+    <!-- SECTION ASSOCIATIONS & LOISIRS -->
     <section id="associations">
       <h2>Associations & Loisirs</h2>
-      <p>Découvrez mes engagements associatifs et mes centres d'intérêt :</p>
+      <p>Mes engagements et centres d'intérêt :</p>
       <div class="gallery">
+        
+        <!-- PHOTO 1 -->
         <div class="gallery-item">
           <span class="gallery-placeholder">Photo association 1</span>
+          <!-- REMPLACEZ PAR : <img src="assets/images/associations/photo1.jpg" alt="Association"> -->
         </div>
+        
+        <!-- PHOTO 2 -->
         <div class="gallery-item">
           <span class="gallery-placeholder">Photo association 2</span>
+          <!-- REMPLACEZ PAR : <img src="assets/images/associations/photo2.jpg" alt="Événement"> -->
         </div>
+        
+        <!-- PHOTO 3 -->
         <div class="gallery-item">
           <span class="gallery-placeholder">Loisir créatif</span>
+          <!-- REMPLACEZ PAR : <img src="assets/images/loisirs/loisir1.jpg" alt="Loisir"> -->
         </div>
+        
+        <!-- PHOTO 4 -->
         <div class="gallery-item">
-          <span class="gallery-placeholder">Événement</span>
+          <span class="gallery-placeholder">Autre activité</span>
+          <!-- REMPLACEZ PAR : <img src="assets/images/loisirs/loisir2.jpg" alt="Activité"> -->
         </div>
+        
       </div>
-      <p><small>Ajoutez vos propres photos en remplaçant ces placeholders</small></p>
+      <p><small>👉 Ajoutez vos photos dans les dossiers assets/images/associations/ et assets/images/loisirs/</small></p>
     </section>
     
+    <!-- SECTION COMPÉTENCES -->
     <section id="skills">
       <h2>Compétences</h2>
       <div class="skills">
@@ -413,20 +390,21 @@
         <span class="skill">Git & GitHub</span>
         <span class="skill">HTML / CSS</span>
         <span class="skill">Data Analysis</span>
-        <span class="skill">Visualisation</span>
+        <span class="skill">Streamlit</span>
       </div>
     </section>
     
+    <!-- SECTION CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email : <a href="mailto:wijdane.chaigneaupro@gmail.com">wijdane.chaigneaupro@gmail.com</a></p>
+      <p>Email : <a href="mailto:wijdane@example.com">wijdane@example.com</a></p>
       <p>GitHub : <a href="https://github.com/WijdaneIT" target="_blank">WijdaneIT</a></p>
       
       <div class="social-links">
-        <a href="#" class="social-link" target="_blank">
+        <!-- REMPLACEZ PAR VOTRE VRAI LIEN LINKEDIN -->
+        <a href="https://linkedin.com/in/votre-profil" class="social-link" target="_blank">
           <span>LinkedIn</span>
         </a>
-        <!-- Ajoutez d'autres réseaux sociaux si nécessaire -->
       </div>
     </section>
   </div>
