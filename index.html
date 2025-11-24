@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wijdane | Portfolio</title>
+  <style>
+    body {
+      background: #f6faff;
+      color: #23395d;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background: #3566b0;
+      color: white;
+      text-align: center;
+      padding: 48px 10px 30px 10px;
+    }
+    h1 { font-size: 2.4em; margin: 0 0 12px 0; }
+    nav {
+      margin-top: 12px;
+    }
+    nav a {
+      color: #d2ecff;
+      margin: 0 14px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.07em;
+    }
+    nav a:hover { text-decoration: underline; }
+    .content {
+      max-width: 700px;
+      margin: 38px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 5px 30px #b3c5dd55;
+      padding: 28px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .skill {
+      background: #b4d8ff;
+      color: #23395d;
+      font-weight: bold;
+      border-radius: 18px;
+      padding: 6px 18px;
+      font-size: 1em;
+      transition: transform 0.25s;
+    }
+    .skill:hover { transform: scale(1.13); background: #3566b0; color: #fff; }
+    .projects { margin-top: 35px; }
+    .project {
+      background: #f3f8ff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px #a4b5de10;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    footer {
+      margin-top: 68px;
+      padding: 36px 10px;
+      text-align: center;
+      background: #23395d;
+      color: #b1cbf7;
+    }
+    @media (max-width: 600px) {
+      .content { padding: 14px; }
+      h1 { font-size: 1.5em; }
+      .projects, .skills { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wijdane - Portfolio</h1>
+    <nav>
+      <a href="#projets">Mes projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="content">
+    <section id="projets">
+      <h2>Mes projets</h2>
+      <div class="projects">
+        <div class="project">
+          <b>Simulateur intelligent d’achats</b><br>
+          Système IA pour optimiser les achats dans le BTP.
+        </div>
+        <div class="project">
+          <b>Analyse de données</b><br>
+          Visualisation, nettoyage et analyse avec Python (Pandas, Matplotlib).
+        </div>
+        <div class="project">
+          <b>Mini-projets Python</b><br>
+          Scripts d’IA, automatisation, petits exercices ludiques.
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">Matplotlib</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">HTML / CSS</span>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email : <a href="mailto:wijdane@example.com">wijdane@example.com</a></p>
+      <p>GitHub : <a href="https://github.com/WijdaneIT" target="_blank">WijdaneIT</a></p>
+    </section>
+  </div>
+  <footer>
+    © 2025 Wijdane. Site hébergé gratuitement sur GitHub Pages.
+  </footer>
+</body>
+</html>
