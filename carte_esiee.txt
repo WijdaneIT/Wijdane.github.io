@@ -1,0 +1,32 @@
+{
+  "Devinette": [
+    {
+      "question": "Quel est l'animal le plus rapide du monde ?",
+      "reponse": "Le guépard"
+    },
+    {
+      "question": "Quelle est la capitale de l'Australie ?",
+      "reponse": "Canberra"
+    }
+  ],
+  "Qui de nous": [
+    "Qui de nous est le plus drôle ?",
+    "Qui de nous mange le plus ?",
+    "Qui de nous tous est le plus chiant ?",
+    "Qui de nous est le plus moche ?",
+    "Qui de nous est intelligent ?",
+    "Qui de nous est le plus riche ?", 
+    "Qui de nous est le plus sportif ?",
+    "Qui de nous voyage le plus ?"
+  ],
+  "Tu préfères": [
+    "Tu préfères être riche ou célèbre ?",
+    "Tu préfères ne jamais dormir ou ne jamais manger ?",
+    "Tu préfères manger du salé ou du sucré ?",
+    "Tu préfères changer de sexe ou conserver le tien ?",
+    "Tu préfères travailler 6 mois non stop et avoir 6 mois de vacances ou avoir des semaines classiques ?"
+  ]
+}
+
+
+
