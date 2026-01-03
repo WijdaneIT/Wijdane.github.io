@@ -10,22 +10,17 @@
     <style>
         /* --- VARIABLES & DESIGN SYSTEM --- */
         :root {
-            --bg-color: #0f172a; /* Bleu nuit très foncé */
-            --card-bg: rgba(30, 41, 59, 0.7); /* Effet verre */
-            --primary: #3b82f6; /* Bleu électrique vibrant */
-            --accent: #10b981; /* Vert émeraude */
-            --luxe-gold: #d4af37; /* Or pour la section luxe */
-            --text-main: #f1f5f9; /* Blanc cassé */
-            --text-muted: #cbd5e1; /* Gris clair lisible */
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --primary: #3b82f6;
+            --accent: #10b981;
+            --luxe-gold: #d4af37;
+            --text-main: #f1f5f9;
+            --text-muted: #cbd5e1;
             --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -37,307 +32,133 @@
 
         /* --- HEADER --- */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: fixed; top: 0; width: 100%; padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.4rem; font-weight: 700;
+            background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
         nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: 0.3s;
-            position: relative;
+            color: var(--text-muted); text-decoration: none; margin-left: 25px;
+            font-weight: 500; font-size: 0.95rem; transition: 0.3s;
         }
 
         nav a:hover { color: var(--primary); }
 
         /* --- HERO SECTION --- */
         .hero {
-            min-height: 95vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            padding: 100px 10% 50px;
+            min-height: 95vh; display: flex; align-items: center; justify-content: center;
+            text-align: left; padding: 100px 10% 50px;
             background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 50%);
         }
 
         .hero-content { max-width: 800px; }
-
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 25px;
-        }
-        
+        .hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 25px; }
         .hero h1 span { color: var(--primary); }
-
-        .hero-intro-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .hero-signature {
-            font-weight: 600;
-            color: var(--primary);
-            margin-top: 10px;
-        }
+        .hero-intro-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+        .hero-signature { font-weight: 600; color: var(--primary); margin-top: 10px; }
 
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--gradient);
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
+            display: inline-block; padding: 12px 30px; background: var(--gradient);
+            color: white; border-radius: 50px; text-decoration: none; font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; cursor: pointer; margin-top: 20px;
         }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            margin-left: 10px;
-        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); margin-left: 10px; }
 
         /* --- SECTIONS --- */
         section { padding: 80px 10%; }
+        h2 { font-size: 2.2rem; margin-bottom: 50px; text-align: center; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--gradient); margin: 15px auto 0; border-radius: 2px; }
 
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            text-align: center;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--gradient);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        /* --- GRILLE PROJETS --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
+        /* --- PROJETS --- */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .project-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 30px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px; padding: 30px; transition: transform 0.3s ease, border-color 0.3s ease;
         }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .project-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+        .project-title i { color: var(--primary); }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+        .tech-tag { background: rgba(59, 130, 246, 0.1); color: #93c5fd; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 500; }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* --- ABOUT & PHOTOS (Modifié pour 8 photos) --- */
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .about-card { background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        
+        /* Carte Voyage élargie */
+        .about-card.voyage-card { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 20px; }
+        
+        .voyage-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grille responsive pour 8 images */
+            gap: 15px;
+            margin-top: 15px;
         }
         
-        .project-title i { color: var(--primary); }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 20px 0;
+        .voyage-photos img {
+            width: 100%; height: 120px; object-fit: cover; border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.1); transition: transform 0.3s;
         }
-
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.1);
-            color: #93c5fd;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+        .voyage-photos img:hover { transform: scale(1.05); border-color: var(--primary); }
+        
+        .about-icon { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
 
         /* --- VIDEO --- */
         .video-placeholder {
-            background: var(--card-bg);
-            border: 2px dashed rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto;
+            background: var(--card-bg); border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 20px; height: 400px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; color: var(--text-muted);
+            max-width: 800px; margin: 0 auto;
         }
-        
-        .video-placeholder i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-            opacity: 0.5;
-        }
+        .video-placeholder i { font-size: 4rem; margin-bottom: 20px; color: var(--primary); opacity: 0.5; }
 
         /* --- L'OREAL --- */
         .loreal-section {
             background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1592914610354-fd354ea45e48?q=80&w=1335&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            border-radius: 30px;
-            text-align: center;
-            border: 1px solid var(--luxe-gold);
-            padding: 80px 20px;
+            background-size: cover; background-position: center; border-radius: 30px;
+            text-align: center; border: 1px solid var(--luxe-gold); padding: 80px 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-
-        .loreal-title {
-            color: var(--luxe-gold);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1.8rem;
-        }
-
-        /* --- ABOUT & PHOTOS --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .about-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .about-card.voyage-card {
-            grid-column: span 2;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-        
-        .voyage-text { flex: 1; }
-        
-        .voyage-photos {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        
-        .voyage-photos img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .voyage-photos img:hover { transform: scale(1.05); }
-        
-        .about-icon {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
+        .loreal-title { color: var(--luxe-gold); text-transform: uppercase; letter-spacing: 3px; font-size: 1.8rem; }
 
         /* --- SKILLS --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
+        .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto; }
         .skill-bubble {
-            background: rgba(255,255,255,0.03);
-            padding: 8px 20px;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            transition: 0.3s;
-            cursor: default;
+            background: rgba(255,255,255,0.03); padding: 8px 20px; border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; transition: 0.3s; cursor: default;
         }
-
         .skill-bubble.hard { border-color: rgba(59, 130, 246, 0.3); }
         .skill-bubble.soft { border-color: rgba(16, 185, 129, 0.3); }
+        .skill-bubble:hover { background: var(--primary); border-color: var(--primary); color: white; }
 
-        .skill-bubble:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
+        /* --- CONTACT --- */
+        .contact-info-box {
+            background: var(--card-bg); padding: 30px; border-radius: 20px;
+            display: inline-block; margin-top: 30px; text-align: left;
+            border: 1px solid rgba(255,255,255,0.1);
         }
+        .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; font-size: 1.1rem; }
+        .contact-item i { color: var(--primary); font-size: 1.3rem; width: 30px; text-align: center; }
+        .contact-item a { color: var(--text-main); text-decoration: none; transition: 0.3s; }
+        .contact-item a:hover { color: var(--primary); }
 
         /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            background: rgba(15, 23, 42, 1);
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .social-icons a {
-            color: var(--text-muted);
-            font-size: 1.8rem;
-            margin: 0 20px;
-            transition: 0.3s;
-        }
-        
+        footer { text-align: center; padding: 50px 20px; background: rgba(15, 23, 42, 1); border-top: 1px solid rgba(255,255,255,0.05); }
+        .social-icons a { color: var(--text-muted); font-size: 1.8rem; margin: 0 20px; transition: 0.3s; }
         .social-icons a:hover { color: var(--primary); }
 
-        /* Responsive Mobile */
+        /* Responsive */
         @media (max-width: 900px) {
             .hero { padding-top: 120px; text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
             nav { display: none; }
             header { justify-content: center; }
-            .about-card.voyage-card { grid-column: span 1; flex-direction: column; }
-            .voyage-photos { width: 100%; }
         }
     </style>
 </head>
@@ -358,20 +179,12 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Salut, je suis <span>Wijdane</span>.<br>Ingénieure Informatique en devenir.</h1>
-            
             <div class="hero-intro-text">
-                <p>
-                    Passionnée par les solutions sociétales, environnementales et économiques que peuvent apporter le métier d'ingénieur informatique, je veux en faire mon métier.
-                </p>
-                <p>
-                    Je suis à la recherche d'une alternance en ingénierie informatique pour septembre 2026. Apprenez à me connaître avec mon portfolio, n'hésitez pas à tester mes applications, mes codes et à me faire des retours !
-                </p>
-                <p>
-                    &lt;3 Bonne navigation.
-                </p>
+                <p>Passionnée par les solutions sociétales, environnementales et économiques que peuvent apporter le métier d'ingénieur informatique, je veux en faire mon métier.</p>
+                <p>Je suis à la recherche d'une alternance en ingénierie informatique pour septembre 2026. Apprenez à me connaître avec mon portfolio, n'hésitez pas à tester mes applications, mes codes et à me faire des retours !</p>
+                <p>&lt;3 Bonne navigation.</p>
                 <p class="hero-signature">Wijdane Chaigneau</p>
             </div>
-
             <div>
                 <a href="#projets" class="btn">Découvrir mes projets</a>
                 <a href="CVWijdane_Chaigneau.pdf" class="btn btn-outline" download>Télécharger mon CV</a>
@@ -382,7 +195,6 @@
     <section id="projets">
         <h2>Ingénierie & Projets</h2>
         <div class="projects-grid">
-            
             <div class="project-card">
                 <div class="project-title"><i class="fas fa-plane-departure"></i> Air Ops & Data Pipeline</div>
                 <p>Conception d'une pipeline ETL robuste pour l'analyse de la ponctualité des vols. Architecture utilisant le Design Pattern DAO pour traiter 5000+ enregistrements en temps réel.</p>
@@ -397,10 +209,8 @@
 
             <div class="project-card">
                 <div class="project-title"><i class="fas fa-dungeon"></i> Escape Game</div>
-                <p>Développement d'un jeu qui sera présenté à divers publics dans le cadre de l'association APIA-IT afin de sensibiliser aux enjeux éthiques que posent l'avancée rapide des technologies.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Java/CSS</span>
-                </div>
+                <p>Développement d'un jeu présenté à divers publics dans le cadre de l'association APIA-IT afin de sensibiliser aux enjeux éthiques que posent l'avancée rapide des technologies.</p>
+                <div class="tech-stack"><span class="tech-tag">Java/CSS</span></div>
                 <a href="https://github.com/WijdaneIT/ton-lien-escape-game" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Voir le Code Source &rarr;</a>
             </div>
 
@@ -411,14 +221,13 @@
                     <span class="tech-tag">Machine Learning</span>
                     <span class="tech-tag">Streamlit</span>
                     <span class="tech-tag">Python Pandas</span>
-                    <span class="tech-tag">Scikit-learn</span>
                     <span class="tech-tag">Impact Sociétal</span>
                 </div>
                 <a href="https://simulateur-cout-par-usage-ivk3ph2nwdrucrfxwp9oqg.streamlit.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Tester le Simulateur &rarr;</a>
             </div>
 
              <div class="project-card">
-                <div class="project-title"><i class="fas fa-hard-hat"></i> SimulIA BTP - Intelligence d'Achat</div>
+                <div class="project-title"><i class="fas fa-hard-hat"></i> SimulIA BTP</div>
                 <p>Solution d'aide à la décision pour le BTP intégrant une base de données SQLite pour la persistance et un modèle Gradient Boosting pour les prédictions.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">Data Science</span>
@@ -428,15 +237,12 @@
                 <a href="https://simulateurbtp-f3bwfbzlvdiullk5wn49qk.streamlit.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Voir la démo live &rarr;</a>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-muted);">
-            Et pleins d'autres projets sont en cours de développement...
-        </p>
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-muted);">Et pleins d'autres projets sont en cours de développement...</p>
     </section>
 
     <section id="video-presentation" style="background: rgba(0,0,0,0.2);">
         <h2>Présentation Vidéo</h2>
         <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">Découvrez mon parcours et ma motivation en images.</p>
-        
         <div class="video-placeholder">
             <i class="fas fa-video"></i>
             <h3>Coming Soon</h3>
@@ -451,11 +257,9 @@
             <p style="max-width: 600px; margin: 0 auto 30px auto; color: var(--text-muted);">
                 Collaboration technique alliant Intelligence Artificielle Générative, expertise olfactive et durabilité pour réinventer l'expérience parfum.
             </p>
-            
              <p style="font-size: 1.1em; font-style: italic; color: var(--luxe-gold); border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 20px; display: inline-block;">
                 "Je suis impatiente de vous révéler le projet quand il sera fini... pour l'instant, nous travaillons dessus ! 🤫"
             </p>
-
             <div class="tech-stack" style="justify-content: center; margin-top: 30px;">
                 <span class="tech-tag" style="background: rgba(212, 175, 55, 0.2); color: #d4af37; border: 1px solid #d4af37;">Gen-AI & Data</span>
                 <span class="tech-tag" style="background: rgba(212, 175, 55, 0.2); color: #d4af37; border: 1px solid #d4af37;">Innovation Sociétale</span>
@@ -474,11 +278,21 @@
                     <p>Passionnée par les voyages (seule ou en groupe), j'ai développé une grande autonomie et un sens de l'organisation aiguisé. C'est cette envie de découvrir le monde qui m'a poussée à me perfectionner en anglais professionnel.</p>
                 </div>
                 <div class="voyage-photos">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&auto=format&fit=crop&q=60" alt="Placeholder Voyage">
-                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=400&auto=format&fit=crop&q=60" alt="Placeholder Voyage">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&auto=format&fit=crop&q=60" alt="Placeholder Voyage">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&auto=format&fit=crop&q=60" alt="Placeholder Voyage">
+                    <img src="assets/images/associations/image1.jpg" alt="Voyage 1">
+                    <img src="assets/images/associations/image2.jpg" alt="Voyage 2">
+                    <img src="assets/images/associations/image3Copie.jpg" alt="Voyage 3">
+                    <img src="assets/images/associations/image4.jpg" alt="Voyage 4">
+                    <img src="assets/images/associations/image5.jpg" alt="Voyage 5">
+                    <img src="assets/images/associations/image6.jpg" alt="Voyage 6">
+                    <img src="assets/images/associations/image7.jpg" alt="Voyage 7">
+                    <img src="assets/images/associations/image8.jpg" alt="Voyage 8">
                 </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-music"></i></div>
+                <h3>Musique & Discipline</h3>
+                <p>7 ans de pratique instrumentale (alto et violoncelle). La musique m'a enseigné la rigueur, l'écoute active et la précision, des qualités que j'applique quotidiennement dans mon code.</p>
             </div>
 
             <div class="about-card">
@@ -490,7 +304,7 @@
             <div class="about-card">
                 <div class="about-icon"><i class="fas fa-hand-holding-heart"></i></div>
                 <h3>Engagement Citoyen</h3>
-                <p>Actuellement présidente et fondatrice d'APIA-IT (Une association de sensibilisation aux enjeux des technologies). Élue deux fois au Conseil des Jeunes. Pilotage de projets internationaux (ex: Sénégal/France sur la sensibilisation aux violences). Je conçois la technologie comme un levier d'impact positif.</p>
+                <p>Actuellement présidente et fondatrice d'APIA-IT. Élue deux fois au Conseil des Jeunes. Pilotage de projets internationaux (ex: Sénégal/France). Je conçois la technologie comme un levier d'impact positif.</p>
             </div>
         </div>
     </section>
@@ -498,7 +312,6 @@
     <section id="skills" style="text-align: center; background: rgba(0,0,0,0.2);">
         <h2>Arsenal Technique</h2>
         <p style="margin-bottom: 30px; color: var(--text-muted);">Une combinaison de compétences techniques solides et de savoir-être.</p>
-        
         <div class="skills-container">
             <div class="skill-bubble hard">Java</div>
             <div class="skill-bubble hard">Python (Avancé)</div>
@@ -508,14 +321,12 @@
             <div class="skill-bubble hard">Cloud Streamlit</div>
             <div class="skill-bubble hard">SQL / Gestion de BDD</div>
             <div class="skill-bubble hard">GitHub</div>
-            <div class="skill-bubble hard">Analyse de données (Pandas/Numpy)</div>
-            <div class="skill-bubble hard">Data Visualisation (Matplotlib/PowerBI)</div>
-            
+            <div class="skill-bubble hard">Analyse de données (Pandas)</div>
+            <div class="skill-bubble hard">PowerBI</div>
             <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Anglais</div>
             <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Arabe</div>
-            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Gestion de projet Agile</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Agile</div>
             <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Communication</div>
-            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Autonomie & Rigueur</div>
         </div>
     </section>
 
@@ -524,11 +335,22 @@
         <p style="margin-bottom: 10px; font-size: 1.2rem; font-weight: 600; color: var(--primary);">
             Disponible et mobile pour une alternance (Septembre 2026).
         </p>
-        <p style="margin-bottom: 40px; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
-            Merci du temps que vous avez pris pour me connaître, n'hésitez pas à me contacter.
-        </p>
+        <p style="color: var(--text-muted);">Merci du temps que vous avez pris pour me connaître.</p>
 
-        <a href="mailto:wijdane.chaigneau.pro@gmail.com" class="btn" style="font-size: 1.1rem; padding: 15px 40px;"><i class="fas fa-paper-plane"></i> Envoyer un Email</a>
+        <div class="contact-info-box">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:wijdane.chaigneau.pro@gmail.com">wijdane.chaigneau.pro@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>06 XX XX XX XX</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/wijdane-chaigneau-a3753b29b/" target="_blank">Wijdane Chaigneau</a>
+            </div>
+        </div>
     </section>
 
     <footer>
