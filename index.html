@@ -120,6 +120,14 @@
         .video-placeholder i { font-size: 4rem; margin-bottom: 20px; color: var(--primary); opacity: 0.5; }
 
         /* --- L'OREAL --- */
+        .loreal-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1592914610354-fd354ea45e48?q=80&w=1335&auto=format&fit=crop');
+            background-size: cover; background-position: center; border-radius: 30px;
+            text-align: center; border: 1px solid var(--luxe-gold); padding: 80px 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .loreal-title { color: var(--luxe-gold); text-transform: uppercase; letter-spacing: 3px; font-size: 1.8rem; }
+
        
         /* --- SKILLS --- */
         .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto; }
@@ -162,7 +170,7 @@
         <nav>
             <a href="#projets">Projets</a>
             <a href="#video-presentation">Présentation</a>
-            
+            <a href="#loreal">Événements</a>
             <a href="#about">À propos</a>
             <a href="#skills">Compétences</a>
             <a href="#contact">Contact</a>
@@ -171,10 +179,10 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Bonjour, je m'appelle <span>Wijdane</span>.<br> ingénieure à en devenir.</h1>
+            <h1>Bienvenu sur mon <span>Portfolio</span>.<br></h1>
             <div class="hero-intro-text">
-                <p>Passionnée par les solutions sociétales, environnementales et économiques que peuvent apporter le métier d'ingénieur informatique, je veux en faire mon métier.</p>
-                <p>Je suis à la recherche d'une alternance en ingénierie informatique pour septembre 2026. Apprenez à me connaître avec mon portfolio, n'hésitez pas à tester mes applications, mes codes et à me faire des retours !</p>
+                <p>Passionnée par les solutions sociétales, environnementales et économiques que peuvent apporter le métier d'ingénieur informatique, je veux en faire ma vocation.</p>
+                <p>Je suis à la recherche d'une alternance en ingénierie informatique pour septembre 2026. </p>
                 <p>&lt;3 Bonne navigation.</p>
                 <p class="hero-signature">Wijdane Chaigneau</p>
             </div>
@@ -184,15 +192,40 @@
             </div>
         </div>
     </section>
+    <section id="loreal">
+        <div class="loreal-section">
+            <h2 class="loreal-title">✨ Hackathon L'Oréal ✨</h2>
+             <span class="location-badge">📍 Station F, Paris</span>
+            <h3 style="color: #f1f1f1; font-weight: 300; margin-bottom: 30px; letter-spacing: 1px;">Redefining the Olfactory Landscape</h3>
+            <p style="max-width: 600px; margin: 0 auto 30px auto; color: var(--text-muted);">
+
+           <em>Éthéré</em> fusionne l'IA générative et la Haute Parfumerie pour créer un rituel olfactif sur-mesure. Plus qu'un produit, c'est une réponse à l'uniformisation
+            <br><br>
+            <strong></strong>Notre algorithme traduit votre personnalité en une expérience modulaire déclinée en deux formats scalables :le coffret Solo pour une alchimie personnelle, et le coffret Duo pour une signature partagée. Une osmose parfaite entre Art & Technologie.
+            <br><br>
+            Une expérience destinée à celles et ceux pour qui le parfum est une signature, une extension de soi.
+        </p>
+            </p>
+             <p style="font-size: 1.1em; font-style: italic; color: var(--luxe-gold); border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 20px; display: inline-block;">
+                "Je suis impatiente de vous révéler le projet quand il sera fini... pour l'instant, nous travaillons dessus ! 🤫"
+            </p>
+            <div class="tech-stack" style="justify-content: center; margin-top: 30px;">
+                <span class="tech-tag" style="background: rgba(212, 175, 55, 0.2); color: #d4af37; border: 1px solid #d4af37;">Gen-AI & Art</span>
+                <span class="tech-tag" style="background: rgba(212, 175, 55, 0.2); color: #d4af37; border: 1px solid #d4af37;">Projet transversal</span>
+                <span class="tech-tag" style="background: rgba(212, 175, 55, 0.2); color: #d4af37; border: 1px solid #d4af37;">Beauté & Mode </span>
+
+            </div>
+        </div>
+    </section>
 
     <section id="projets">
         <h2>Ingénierie & Projets</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-title"><i class="fas fa-plane-departure"></i> Air Ops & Data Pipeline</div>
-                <p>Conception d'une pipeline ETL robuste pour l'analyse de la ponctualité des vols. Architecture utilisant le Design Pattern DAO pour traiter 5000+ enregistrements en temps réel.</p>
+                <p>Conception d'une pipeline ETL robuste pour l'analyse de la ponctualité des vols. J'ai échangé avec des collaborateurs d'AirFrance (Manager, Ingénieur, chef de projet ...) pour comprendre ce qui etait vraiment utilisé.</p>
                 <div class="tech-stack">
-                    <span class="tech-tag">Java Enterprise</span>
+                    <span class="tech-tag">Java</span>
                     <span class="tech-tag">Architecture DAO</span>
                     <span class="tech-tag">SQL / Python</span>
                     <span class="tech-tag">Analyse de Données</span>
@@ -202,31 +235,34 @@
 
            <div class="project-card">
                 <div class="project-title"><i class="fas fa-dungeon"></i> Escape Game</div>
-                <p>Développement d'un jeu présenté à divers publics dans le cadre de l'association APIA-IT afin de sensibiliser aux enjeux éthiques que posent l'avancée rapide des technologies.</p>
+                <p>Développement d'un jeu immersif et pédagogique dans le cadre d'APIA-IT afin de sensibiliser aux enjeux éthiques que posent l'avancée rapide des technologies.</p>
                 <div class="tech-stack"><span class="tech-tag">Java/CSS</span></div>
                 <span style="color: var(--text-muted); font-size: 0.9rem; cursor: not-allowed;">
-                    <i class="fas fa-lock" style="margin-right: 8px;"></i> Code en accès restreint (Bientôt public)
+                    <i class="fas fa-lock" style="margin-right: 8px;"></i> Code en accès restreint
             </span>
                 </div>
 
             <div class="project-card">
-                <div class="project-title"><i class="fas fa-leaf"></i> Eco-Cost Predictor (MLOps)</div>
-                <p>Réponse technique à la problématique de la Fast Fashion. Déploiement d'un modèle de Machine Learning pour prédire la durabilité des textiles.</p>
+                <div class="project-title"><i class="fas fa-leaf"></i> Eco-Cost Predictor</div>
+                <p>Après le scandale de la fast fashion au BVH à Paris j'ai décider de creer une application qui permet de simuler le coût environnemental, social et économique d'un vétement selon une analyse multicritère.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">Machine Learning</span>
                     <span class="tech-tag">Streamlit</span>
                     <span class="tech-tag">Python Pandas</span>
                     <span class="tech-tag">Impact Sociétal</span>
-                </div>
+                    <span class="tech-tag">Random forest</span>
+    
+                </div>> 
                 <a href="https://simulateur-cout-par-usage-ivk3ph2nwdrucrfxwp9oqg.streamlit.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Tester le Simulateur &rarr;</a>
             </div>
 
              <div class="project-card">
                 <div class="project-title"><i class="fas fa-hard-hat"></i> SimulIA BTP</div>
-                <p>Solution d'aide à la décision pour le BTP intégrant une base de données SQLite pour la persistance et un modèle Gradient Boosting pour les prédictions.</p>
+                <p>Solution d'aide à la décision pour le secteur de la construction imaginé après avoir analyser les besoins du marché.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">Data Science</span>
                     <span class="tech-tag">SQLite Database</span>
+                    <span class="tech-tag">Prototypage rapide (Streamlit)</span>
                     <span class="tech-tag">Gradient Boosting</span>
                 </div>
                 <a href="https://simulateurbtp-f3bwfbzlvdiullk5wn49qk.streamlit.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Voir la démo live &rarr;</a>
@@ -234,26 +270,27 @@
         </div>
         <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-muted);">Et pleins d'autres projets sont en cours de développement...</p>
     </section>
+      </section>
 
     <section id="video-presentation" style="background: rgba(0,0,0,0.2);">
         <h2>Présentation Vidéo</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">Découvrez mon parcours et ma motivation en images.</p>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);"> Découvrez moi en vidéo.</p>
         <div class="video-placeholder">
             <i class="fas fa-video"></i>
             <h3>Coming Soon</h3>
             <p>Ma vidéo de présentation sera bientôt disponible ici.</p>
         </div>
-    </section>
+  
 
     <section id="about">
-        <h2>Profil & Engagements</h2>
+        <h2> Qui je sui vraiment </h2>
         <div class="about-grid">
             
             <div class="about-card voyage-card">
                 <div class="voyage-text">
                     <div class="about-icon"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Voyages</h3>
-                    <p>Passionnée par les voyages (seule ou en groupe), j'ai développé une grande autonomie et un sens de l'organisation aiguisé. C'est cette envie de découvrir le monde qui m'a poussée à me perfectionner en anglais professionnel.</p>
+                    <p>Passionnée par les voyages (seule ou en groupe), j'ai développé une grande autonomie et un sens de l'organisation aiguisé. C'est cette envie de découvrir le monde qui m'a poussée à me perfectionner en anglais.</p>
                 </div>
                 <div class="voyage-photos">
                     <img src="assets/images/associations/image2.jpg" alt="Voyage 2">
@@ -268,20 +305,20 @@
 
             <div class="about-card">
                 <div class="about-icon"><i class="fas fa-music"></i></div>
-                <h3>Musique & Discipline</h3>
-                <p>7 ans de pratique instrumentale (alto et violoncelle). La musique m'a enseigné la rigueur, l'écoute active et la précision, des qualités que j'applique quotidiennement dans mon code.</p>
+                <h3>Musique & Rigeur </h3>
+                <p>8 ans de pratique instrumentale (alto et violoncelle). La musique m'a enseigné la rigueur, l'écoute active et la précision, des qualités que j'applique quotidiennement dans mes projets.</p>
             </div>
 
             <div class="about-card">
                 <div class="about-icon"><i class="fas fa-medal"></i></div>
-                <h3>Rigueur & Compétition</h3>
-                <p>Ancienne championne départementale et vice-championne d'Ile-de-France de Judo. La discipline sportive et la persévérance face à l'échec font partie de moi.</p>
+                <h3>Judo & Résilience</h3>
+                <p>Championne départementale et vice-championne d'Ile-de-France de Judo. La discipline sportive et la persévérance face à l'échec font partie de moi.</p>
             </div>
             
             <div class="about-card">
                 <div class="about-icon"><i class="fas fa-hand-holding-heart"></i></div>
                 <h3>Engagement Citoyen</h3>
-                <p>Actuellement présidente et fondatrice d'APIA-IT. Élue deux fois au Conseil des Jeunes. Pilotage de projets internationaux (ex: Sénégal/France). Je conçois la technologie comme un levier d'impact positif.</p>
+                <p>Présidente et fondatrice d'APIA-IT. Élue trois fois au Conseil des Jeunes. J'ai participé à l'aboutisssement de +15 projets citoyens dont des projets internationaux (Sénégal/France).</p>
             </div>
         </div>
     </section>
@@ -299,21 +336,25 @@
             <div class="skill-bubble hard">SQL / Gestion de BDD</div>
             <div class="skill-bubble hard">GitHub</div>
             <div class="skill-bubble hard">Analyse de données </div>
+            <div class="skill-bubble hard">Vibe Coding</div>
             <div class="skill-bubble hard">Visualisation de données</div>
             <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Anglais</div>
             <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Arabe</div>
-            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Polyvalente</div>
-            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Communication</div>
-            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Proactive</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Agile</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Résiliente</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Perspicace</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Autonomne</div>
+            <div class="skill-bubble soft" style="border-color: var(--accent); color: var(--accent);">Gestion de projet</div>
+
         </div>
     </section>
 
     <section id="contact" style="text-align: center;">
-        <h2>Contactez-moi</h2>
+        <h2> Mes contacts</h2>
         <p style="margin-bottom: 10px; font-size: 1.2rem; font-weight: 600; color: var(--primary);">
             Disponible et mobile pour une alternance (Septembre 2026).
         </p>
-        <p style="color: var(--text-muted);">Merci du temps que vous avez pris pour me connaître.</p>
+        <p style="color: var(--text-muted);">Merci du temps que vous avez pris pour me connaître, n'hésitez pas à me contacter !</p>
 
         <div class="contact-info-box">
             <div class="contact-item">
